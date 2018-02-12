@@ -12,6 +12,10 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
   <style>
+    body {
+      background-color: red;
+      transition: background-color 7s;
+    }
     p {
       text-align: center;
       font-family: 'Montserrat', sans-serif;
@@ -28,6 +32,20 @@
  </head>
  
  <body>
+   	<script type="text/javascript">
+		var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+
+		var i = 1;
+
+		window.setInterval(function(){
+			document.body.style.backgroundColor = colors[i];
+			i++;
+			if (i === colors.length){
+				i=0;
+			}
+		}, 5000);
+	</script>
+
    <p><img src="fairfax_digital_logo.gif" alt="Fairfax Digital Logo"></p>
    <hr>
    <p> This website contains the Terms and Conditions for Fraser's Fabulous Fairfax Friday Feast. </p>
