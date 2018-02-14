@@ -23,7 +23,7 @@
       text-align:center;
       font-family: 'Montserrat', sans-serif;
     }
-    button {
+    .button {
       background-color: #017CC2;
       border: none;
       color: white;
@@ -36,6 +36,32 @@
       cursor: pointer;
       font-family: 'Montserrat', sans-serif;
       border-radius: 20px;
+      transition: all 0.5s;
+      width: 200px;
+    }
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button:hover span {
+      padding-right: 25px;
+    }
+
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
     }
   </style>
 </head>
@@ -43,6 +69,6 @@
   <p><img src="fairfax_support.png" height="475" width="925"></p>
   <p>v soz but theres not an operator lady here rn ul have 2 ckeck back l8r luv</p>
   <p>all the best from Caffy XXX</p>
-  <p><button onclick="window.location.href='/fairfax.html'">Back to the T's & C's</button></p>
+  <p><button onclick="window.location.href='/fairfax.html'" class="button"><span>Back to the T's & C's </span></button></p>
 </body>
 </html>
